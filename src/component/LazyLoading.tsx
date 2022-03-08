@@ -23,7 +23,6 @@ const LazyLoading: FC<ILazyImage> = ({ src }): JSX.Element => {
       }
     })
   }
-  console.log("render");
 
   return (
     <img ref={imgRef} src={isLoading ? src : NoImage} style={{ width: 200, height: 160 }} alt="Lazy Loading..." />
