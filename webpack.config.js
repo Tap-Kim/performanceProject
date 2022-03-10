@@ -7,7 +7,7 @@ module.exports = {
   mode: "development",
 
   // entry를 기준으로 연관된 모든 파일들을 번들링
-  entry: "./src/index",
+  entry: ["babel-polyfill", "./src/index"],
 
   // 번들링 될 파일 확장자 등록
   resolve: {
@@ -38,6 +38,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"), // 빌드되는 파일들이 만들어지는 위치, __dirname: 현재 디렉토리
     filename: "bundle.js", // 번들파일 이름
+    publicPath: '/' // ouput 위치 지정
   },
 
   // webpack 서버 설정
@@ -47,9 +48,11 @@ module.exports = {
     proxy: {
       "/api": { // api로 시작하는 경로일 경우
         target: "http://localhost:3001", // 요청 url 앞에 target을 붙여주기
-        pathRewrite: {"/api": "/"} // api에 해당하는 url 제거
+        pathRewrite: {"/api": "/"}, // api에 해당하는 url 제거
+        changeOrigin: true
       }
-    }
+    },
+    historyApiFallback: true
   },
 
   plugins: [

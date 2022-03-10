@@ -7,9 +7,9 @@ const CorsProxy = () => {
         console.log(res);
 
     }
-    return <div>
+    return (<div>
         <button type="button" onClick={getAPI}>localAPI</button>
-    </div>;
-};
+    </div>);
+}
 
 export default CorsProxy;
