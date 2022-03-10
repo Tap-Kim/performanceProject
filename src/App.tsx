@@ -4,6 +4,7 @@ import CorsProxy from "./component/CorsProxy";
 import Hello from "./component/Hello";
 import LazyLoading from "./component/LazyLoading";
 import NotFound from "./component/NotFound";
+import StyleTS from "./component/StyleTS";
 import kakaoFriends from './image/kakaoFriends.png'
 
 const App: FC = (): JSX.Element => {
@@ -14,6 +15,7 @@ const App: FC = (): JSX.Element => {
         <Route path="/hello" element={<Hello />} />
         <Route path="/cp" element={<CorsProxy />} />
         <Route path="/lazy" element={[...Array(1000)].map((val, index) => <LazyLoading key={index} src={kakaoFriends} />)} />
+        <Route path="/StyleTS" element={<StyleTS />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
