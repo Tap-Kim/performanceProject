@@ -46,9 +46,9 @@ module.exports = {
     static: path.join(__dirname, "build"), // 이 경로에 있는 파일이 변경될 때 다시 컴파일
     port, // 서버 포트 지정
     proxy: {
-      "/api": { // api로 시작하는 경로일 경우
-        target: "http://localhost:3001", // 요청 url 앞에 target을 붙여주기
-        pathRewrite: {"/api": "/"}, // api에 해당하는 url 제거
+      "/api/**": { // api로 시작하는 경로일 경우
+        target: "http://localhost:8080/", // 요청 url 앞에 target을 붙여주기
+        pathRewrite: {"^/api": "/"}, // api에 해당하는 url 제거
         changeOrigin: true
       }
     },

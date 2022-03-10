@@ -1,5 +1,6 @@
 {
   "name": "pureReact",
+  "sideEffects": false,
   "version": "1.0.0",
   "description": "react init description",
   "main": "index.jsx",
