@@ -1,23 +1,26 @@
-import React, { FC } from "react";
+import React, { FC, lazy, Suspense } from "react";
 import { Routes, Route, BrowserRouter, Router, Navigate } from 'react-router-dom'
 import CorsProxy from "./component/CorsProxy";
 import Hello from "./component/Hello";
 import LazyLoading from "./component/LazyLoading";
 import NotFound from "./component/NotFound";
 import StyleTS from "./component/StyleTS";
-import kakaoFriends from './image/kakaoFriends.png'
+
+const LazyHello = lazy(() => import(/*webpackChunkName: "LazyHello"*/ './lazy/LazyHello'));
 
 const App: FC = (): JSX.Element => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to={"/hello"} replace />} />
-        <Route path="/hello" element={<Hello />} />
-        <Route path="/cp" element={<CorsProxy />} />
-        <Route path="/lazy" element={[...Array(1000)].map((val, index) => <LazyLoading key={index} src={kakaoFriends} />)} />
-        <Route path="/StyleTS" element={<StyleTS />} />
-        <Route path="/*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={LazyHello}>
+        <Routes>
+          <Route path="/" element={<Navigate to={"/hello"} replace />} />
+          <Route path="/hello" element={<Hello />} />
+          <Route path="/cp" element={<CorsProxy />} />
+          <Route path="/lazy" element={<LazyLoading />} />
+          <Route path="/StyleTS" element={<StyleTS />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 };

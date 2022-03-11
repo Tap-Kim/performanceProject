@@ -1,11 +1,21 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 const NoImage = 'https://blog.kakaocdn.net/dn/Hh733/btrcA1znbC9/m3cFIkMBMYyJlnHe7WBiN1/img.gif';
 const TStoryImage = 'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fck83td%2FbtrcwxeJJm6%2FugdgkwZcq1YTnNEnksZ4z1%2Fimg.jpg';
-interface ILazyImage {
-  src: string;
-}
+import src from '../image/kakaoFriends.png'
 
-const LazyLoading: FC<ILazyImage> = ({ src }): JSX.Element => {
+const LazyLoading: FC = (): JSX.Element => {
+  return (
+    <>
+      {
+        [...Array(1000)].map((val, index) => <LazyImageItem key={index} />)
+      }
+    </>
+  );
+};
+
+export default LazyLoading;
+
+export const LazyImageItem: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const imgRef = useRef<HTMLImageElement>(null);
   const observer = useRef<IntersectionObserver>();
@@ -24,9 +34,10 @@ const LazyLoading: FC<ILazyImage> = ({ src }): JSX.Element => {
     })
   }
 
-  return (
-    <img ref={imgRef} src={isLoading ? src : NoImage} style={{ width: 200, height: 160 }} alt="Lazy Loading..." />
-  );
+  return <img
+    ref={imgRef}
+    src={isLoading ? src : NoImage}
+    style={{ width: 200, height: 160 }}
+    alt="Lazy Loading..."
+  />;
 };
-
-export default LazyLoading;

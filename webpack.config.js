@@ -37,7 +37,7 @@ module.exports = {
   // 빌드 설정
   output: {
     path: path.resolve(__dirname, "build"), // 빌드되는 파일들이 만들어지는 위치, __dirname: 현재 디렉토리
-    filename: "bundle.js", // 번들파일 이름
+    filename: "[name].bundle.js", // 번들파일 이름
     publicPath: '/' // ouput 위치 지정
   },
 
