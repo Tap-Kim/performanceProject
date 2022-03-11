@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { HeaderBtn, MainContainerDiv, MainContainerHeader } from "../styled/StyledMain";
+
 interface ChildrenInterface {
     children: JSX.Element
 }

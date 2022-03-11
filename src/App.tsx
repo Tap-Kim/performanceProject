@@ -6,6 +6,7 @@ import LazyLoading from "./component/LazyLoading";
 import NotFound from "./component/NotFound";
 import StyleTS from "./component/StyleTS";
 import MainContainer from "./component/MainContainer";
+import './App.css';
 
 const LazyHello = lazy(() => import(/*webpackChunkName: "LazyHello"*/ './lazy/LazyHello'));
 
