@@ -14,4 +14,9 @@ export const Ulist = styled.ul`
 export const LItem = styled.li`
     padding: 10px;
     list-style: none;
+    background-color: #55efc4;
+    &:hover {
+        background-color: white;
+        color: black;
+    }
 `

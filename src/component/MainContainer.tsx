@@ -9,7 +9,7 @@ const MainContainer = ({ children }: ChildrenInterface) => {
     return (
         <MainContainerDiv>
             <MainContainerHeader>
-                <Link to="/" style={{ textDecoration: 'none' }}>
+                <Link to="/">
                     <HeaderBtn>
                         Back
                     </HeaderBtn>
