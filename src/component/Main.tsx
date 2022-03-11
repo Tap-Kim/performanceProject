@@ -9,6 +9,7 @@ const Main = () => {
                 <Link to={"/cp"}><LItem>CorsProxy</LItem></Link>
                 <Link to={"/lazy"}><LItem>LazyLoading</LItem></Link>
                 <Link to={"/StyleTS"}><LItem>StyleTS</LItem></Link>
+                <Link to={"/recoil"}><LItem>Recoil</LItem></Link>
             </Ulist>
         </MainSection>
     );

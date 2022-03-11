@@ -6,7 +6,10 @@
 - typescript
 - eslint
 - prettier
+- styled-components
+- Recoil
 
 # 성능 체크 목록
 - LazyLoading 테스트 
-| LazyLoading.tsx
+- Code Spliting 
+- tree shaking

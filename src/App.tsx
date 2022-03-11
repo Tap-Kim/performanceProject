@@ -7,6 +7,7 @@ import NotFound from "./component/NotFound";
 import StyleTS from "./component/StyleTS";
 import MainContainer from "./component/MainContainer";
 import './App.css';
+import RecoilComponent from "./component/RecoilComponent";
 
 const LazyHello = lazy(() => import(/*webpackChunkName: "LazyHello"*/ './lazy/LazyHello'));
 
@@ -21,6 +22,7 @@ const App: FC = (): JSX.Element => {
             <Route path="/cp" element={<CorsProxy />} />
             <Route path="/lazy" element={<LazyLoading />} />
             <Route path="/StyleTS" element={<StyleTS />} />
+            <Route path="/recoil" element={<RecoilComponent />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </Suspense>

@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* Basic Options */
     "target": "es5",
-    "module": "commonjs",
+    "module": "ESNext", // commonjs 설정시 코드 스플릿 불가
     "lib": ["ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ES2020", "DOM"],
     "jsx": "react",
     "declaration": true,
