@@ -19,3 +19,24 @@ export const StyledMainP = styled.p`
     font-size: 10px;
     color: 'skyblue';
 `
+
+export const MainContainerDiv = styled.div`
+
+`
+
+export const MainContainerHeader = styled.header`
+    
+`
+
+export const HeaderBtn = styled.button`
+    font: bold 1.25rem/1 poppins;
+    color: #71DFBE;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: #2B2D2F;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 4px;
+`
