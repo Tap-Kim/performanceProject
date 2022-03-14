@@ -10,6 +10,8 @@ import './App.css';
 import RecoilComponent from "./component/RecoilComponent";
 import InfiniteScroll from "./component/InfiniteScroll";
 import Prefix from "./component/Prefix";
+import Kurly from "./component/Kurly";
+
 
 const LazyHello = lazy(() => import(/*webpackChunkName: "LazyHello"*/ './lazy/LazyHello'));
 
@@ -27,6 +29,7 @@ const App: FC = (): JSX.Element => {
             <Route path="/recoil" element={<RecoilComponent />} />
             <Route path="/infinite" element={<InfiniteScroll />} />
             <Route path="/prefix" element={<Prefix />} />
+            <Route path="/kurly" element={<Kurly />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </Suspense>
