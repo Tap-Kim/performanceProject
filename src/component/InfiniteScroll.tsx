@@ -78,7 +78,7 @@ const Item = ({ name, phone, age }: Info) => (
     </BoxTable>
 );
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
     width: 800px;
     margin: 0 auto;
 `

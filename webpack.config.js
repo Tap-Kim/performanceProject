@@ -32,8 +32,8 @@ module.exports = {
         use: 'file-loader'
       },
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.s?css$/,
+        use: ["style-loader", "css-loader","postcss-loader","sass-loader"],
       },
     ]
   },
@@ -48,7 +48,7 @@ module.exports = {
   // webpack 서버 설정
   devServer: {
     static: path.join(__dirname, "build"), // 이 경로에 있는 파일이 변경될 때 다시 컴파일
-    port, // 서버 포트 지정
+    // port, // 서버 포트 지정
     proxy: {
       "/api/**": { // api로 시작하는 경로일 경우
         target: "http://localhost:8080/", // 요청 url 앞에 target을 붙여주기

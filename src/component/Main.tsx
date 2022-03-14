@@ -11,6 +11,7 @@ const Main = () => {
                 <Link to={"/StyleTS"}><LItem>StyleTS</LItem></Link>
                 <Link to={"/recoil"}><LItem>Recoil</LItem></Link>
                 <Link to={"/infinite"}><LItem>InfiniteScroll</LItem></Link>
+                <Link to={"/prefix"}><LItem>Prefix</LItem></Link>
             </Ulist>
         </MainSection>
     );

@@ -21,6 +21,7 @@
     "@babel/preset-react": "^7.16.7",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.13",
+    "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
     "babel-plugin-styled-components": "^1.10.1-0",
     "babel-polyfill": "^6.26.0",
@@ -30,7 +31,11 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.3",
     "html-webpack-plugin": "^5.5.0",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.8",
+    "postcss-loader": "^6.2.1",
     "prettier": "^2.5.1",
+    "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.7",
     "ts-node": "^10.7.0",
@@ -51,6 +56,8 @@
       "not op_mini all"
     ],
     "development": [
+      "> 1%", 
+      "last 2 versions",
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
