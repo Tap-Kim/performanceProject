@@ -10,6 +10,7 @@ const Main = () => {
                 <Link to={"/lazy"}><LItem>LazyLoading</LItem></Link>
                 <Link to={"/StyleTS"}><LItem>StyleTS</LItem></Link>
                 <Link to={"/recoil"}><LItem>Recoil</LItem></Link>
+                <Link to={"/infinite"}><LItem>InfiniteScroll</LItem></Link>
             </Ulist>
         </MainSection>
     );
