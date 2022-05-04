@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@comp/*": ["src/component/*"],
+      "@recoil/*": ["src/modules/recoil/*"]
+    },
     /* Basic Options */
     "target": "es5",
     "module": "ESNext", // commonjs 설정시 코드 스플릿 불가
@@ -21,6 +27,5 @@
     "forceConsistentCasingInFileNames": true,
     "typeRoots": ["./node_modules/@types", "@types"],
   },
-  "exclude": ["node_modules"],
-  "include": ["./src/**/*"]
+  "exclude": ["node_modules"]
 }

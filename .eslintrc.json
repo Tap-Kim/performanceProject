@@ -9,7 +9,7 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:prettier/recommended",
-        "prettier/@typescript-eslint"
+        "prettier/@typescript-eslint",
     ],
     "globals": {
         "Atomics": "readonly",
@@ -23,8 +23,13 @@
     },
     "ignorePatterns": ["dist", "node_modules/"],
     "plugins": [
-        "react", "@typescript-eslint"
+        "react", "@typescript-eslint", "react-hooks","prettier"
     ],
     "rules": {
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
     }
 }

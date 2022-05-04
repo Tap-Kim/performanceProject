@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
-import { _customNum, _num, _selectorNum } from "../modules/recoil/numberRecoil";
+import { _customNum, _num, _selectorNum } from "@recoil/numberRecoil";
 
 const RecoilComponent: FC = (): JSX.Element => {
     // 1. basic 방법

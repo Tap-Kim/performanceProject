@@ -11,6 +11,11 @@ module.exports = {
 
   // 번들링 될 파일 확장자 등록
   resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+      "@comp": path.resolve(__dirname, "src/component"),
+      "@recoil": path.resolve(__dirname, "src/modules/recoil")
+    },
     extensions: [".js", ".jsx", ".ts", '.tsx']
   },
 

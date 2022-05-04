@@ -1,16 +1,16 @@
 import React, { FC, lazy, Suspense } from "react";
 import { Routes, Route, BrowserRouter, Router, Navigate } from 'react-router-dom'
-import CorsProxy from "./component/CorsProxy";
-import Main from "./component/Main";
-import LazyLoading from "./component/LazyLoading";
-import NotFound from "./component/NotFound";
-import StyleTS from "./component/StyleTS";
-import MainContainer from "./component/MainContainer";
+import CorsProxy from "@comp/CorsProxy";
+import Main from "@comp/Main";
+import LazyLoading from "@comp/LazyLoading";
+import NotFound from "@comp/NotFound";
+import StyleTS from "@comp/StyleTS";
+import MainContainer from "@comp/MainContainer";
 import './App.css';
-import RecoilComponent from "./component/RecoilComponent";
-import InfiniteScroll from "./component/InfiniteScroll";
-import Prefix from "./component/Prefix";
-import Kurly from "./component/Kurly";
+import RecoilComponent from "@comp/RecoilComponent";
+import InfiniteScroll from "@comp/InfiniteScroll";
+import Prefix from "@comp/Prefix";
+import Kurly from "@comp/Kurly";
 
 
 const LazyHello = lazy(() => import(/*webpackChunkName: "LazyHello"*/ './lazy/LazyHello'));
